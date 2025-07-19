@@ -1,4 +1,4 @@
-$(document).ready(function () {
+!(function ($) {
     "use strict";
     let loadedData = null; // tetap lokal, tidak global
 
