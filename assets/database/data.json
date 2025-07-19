@@ -1,0 +1,138 @@
+{
+  "profile": {
+    "name": "George Richard P.",
+    "image": "assets/img/portfolio/portfolio-1.jpg",
+    "social": [
+      { "name": "twitter", "url": "https://x.com/georgerichard_p", "icon": "bx bxl-twitter" },
+      { "name": "linkedin", "url": "https://www.linkedin.com/in/george-richard-payara-64517521b/", "icon": "bx bxl-linkedin" }
+    ]
+  },
+  "hero": {
+    "name": "George Richard P.",
+    "roles": ["Sr Mobile Developer", "Flutter Expert", "Team Lead", "Problem Solver"]
+  },
+  "about": {
+    "title": "About",
+    "description": "I’m from Maluku, Indonesia — far from the tech hubs, but deeply passionate about IT, especially mobile app development. Right now, I mainly build apps using Flutter, focusing on clean, efficient code and great user experience.",
+    "jobTitle": "Senior Mobile Developer",
+    "introduction": "A proficient software engineer skilled in Object-Oriented Programming (OOP), adept at writing clean and structured code, experienced in designing robust and maintainable software architectures for mobile solutions—especially with Flutter—skilled in team management, creating project skeletons, developing core features, managing Git, performing code reviews, solving complex problems, and overseeing app deployments on both the App Store and Play Store.",
+    "details": [
+      { "label": "Birthday", "value": "8 Feb 1995" },
+      { "label": "Phone", "value": "+62 821 9078 2029" },
+      { "label": "City", "value": "Jakarta" },
+      { "label": "Email", "value": "georgerichardpayara@gmail.com" }
+    ],
+    "closing": "I’m excited to take on new challenges and collaborate on innovative projects. With strong mobile development skills and a commitment to quality, I’m ready to make a meaningful contribution to your team’s and company’s success."
+  },
+  "facts": {
+    "title": "Facts",
+    "description": "Here are some achievements and statistics that highlight my experience and contributions across various projects I have worked on.",
+    "items": [
+      { "icon": "icofont-simple-smile", "count": 15, "label": "Happy Clients" },
+      { "icon": "icofont-document-folder", "count": 20, "label": "Projects" },
+      { "icon": "icofont-live-support", "count": 2500, "label": "Hours Of Support" },
+      { "icon": "icofont-users-alt-5", "count": 8, "label": "Hard Workers" }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "A collection of my technical skills, covering various programming languages, frameworks, and tools that I master to develop efficient and high-quality software solutions.",
+    "items": [
+      { "name": "Flutter & Dart", "value": 95 },
+      { "name": "Swift & Kotlin", "value": 70 },
+      { "name": "CI/CD (Codemagic, Bitrise)", "value": 90 },
+      { "name": "SOLID Principle", "value": 95 },
+      { "name": "Clean Architecture", "value": 90 },
+      { "name": "Git", "value": 95 }
+    ]
+  },
+  "resume": {
+    "title": "Resume",
+    "description": "Jejak karir dan pendidikan saya, yang menggambarkan pengalaman profesional dan latar belakang akademis yang telah membentuk keahlian saya hingga saat ini.",
+    "summary": {
+      "name": "George Richard P.",
+      "content": "Pengembang Mobile Senior yang inovatif dan berorientasi pada hasil dengan pengalaman lebih dari 5 tahun dalam merancang, mengembangkan, dan mengelola aplikasi mobile yang kompleks. Terbukti mampu memimpin tim dan memberikan solusi teknis yang solid.",
+      "details": [
+        "Jakarta, Indonesia",
+        "+62 821 9078 2029",
+        "georgerichardpayara@gmail.com"
+      ]
+    },
+    "education": [
+      {
+        "degree": "Sarjana Teknik Informatika",
+        "period": "2013 - 2017",
+        "institution": "Universitas Kristen Duta Wacana, Yogyakarta",
+        "description": "Fokus pada rekayasa perangkat lunak dan pengembangan aplikasi, membangun dasar yang kuat dalam algoritma, struktur data, dan paradigma pemrograman."
+      }
+    ],
+    "experience": [
+      {
+        "title": "Sr. Mobile Developer",
+        "period": "2021 - Sekarang",
+        "company": "PT. Suitmedia",
+        "tasks": [
+          "Memimpin pengembangan aplikasi mobile menggunakan Flutter untuk berbagai klien.",
+          "Merancang arsitektur aplikasi dan memastikan kualitas kode melalui code review.",
+          "Berkolaborasi dengan tim UI/UX, backend, dan manajer proyek.",
+          "Mengelola proses rilis aplikasi ke Google Play Store dan Apple App Store."
+        ]
+      },
+      {
+        "title": "Mobile Developer",
+        "period": "2018 - 2021",
+        "company": "PT. AINO INDONESIA",
+        "tasks": [
+          "Mengembangkan dan memelihara aplikasi e-money dan sistem pembayaran.",
+          "Menerapkan fitur-fitur baru berdasarkan kebutuhan bisnis.",
+          "Bekerja sama dalam tim untuk memecahkan masalah teknis yang kompleks."
+        ]
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Koleksi proyek-proyek unggulan yang pernah saya kerjakan, menunjukkan kemampuan saya dalam mengembangkan berbagai jenis aplikasi mobile dengan teknologi terdepan.",
+    "filters": [
+      { "name": "Highlight", "filter": "*" },
+      { "name": "App", "filter": ".filter-app" },
+      { "name": "Web", "filter": ".filter-web" }
+    ],
+    "items": [
+      { "title": "Pospay", "category": "App", "image": "assets/img/portfolio/portfolio-1.jpg", "detailsUrl": "portfolio-details.html" },
+      { "title": "Jakone Mobile", "category": "App", "image": "assets/img/portfolio/portfolio-1.jpg", "detailsUrl": "portfolio-details.html" },
+      { "title": "Jakone Pay", "category": "App", "image": "assets/img/portfolio/portfolio-1.jpg", "detailsUrl": "portfolio-details.html" },
+      { "title": "Bank Jatim", "category": "App", "image": "assets/img/portfolio/portfolio-1.jpg", "detailsUrl": "portfolio-details.html" },
+      { "title": "SalesTrax", "category": "Web", "image": "assets/img/portfolio/portfolio-1.jpg", "detailsUrl": "portfolio-details.html" }
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "description": "Layanan profesional yang saya tawarkan, berfokus pada pengembangan aplikasi mobile, konsultasi arsitektur, dan manajemen siklus hidup aplikasi untuk membantu bisnis Anda mencapai tujuan digitalnya.",
+    "items": [
+      { "icon": "bi bi-phone", "title": "Mobile App Development", "description": "Pengembangan aplikasi cross-platform dengan Flutter untuk iOS dan Android, fokus pada performa, skalabilitas, dan user experience." },
+      { "icon": "icofont-architecture-alt", "title": "Software Architecture", "description": "Merancang arsitektur aplikasi yang bersih, modular, dan mudah dipelihara (Clean Architecture, SOLID) untuk proyek jangka panjang." },
+      { "icon": "icofont-code-alt", "title": "Code Review & Refactoring", "description": "Menganalisis dan meningkatkan kualitas basis kode yang sudah ada untuk performa dan keterbacaan yang lebih baik." },
+      { "icon": "icofont-people", "title": "Team Leadership", "description": "Memimpin dan membimbing tim developer, mengatur alur kerja Git, dan memastikan kolaborasi yang efektif." },
+      { "icon": "icofont-cloud-upload", "title": "App Deployment", "description": "Manajemen penuh untuk proses rilis dan pembaruan aplikasi di Google Play Store dan Apple App Store, termasuk CI/CD." },
+      { "icon": "icofont-gears", "title": "Technical Consultation", "description": "Memberikan konsultasi teknis untuk membantu Anda memilih teknologi dan pendekatan terbaik untuk proyek mobile Anda." }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "description": "Apa kata mereka yang pernah bekerja sama dengan saya. Testimoni ini memberikan gambaran tentang etos kerja, keahlian, dan kontribusi saya dalam sebuah tim.",
+    "items": [
+      { "quote": "George adalah seorang developer yang sangat handal dan cepat belajar. Kemampuannya dalam memecahkan masalah sangat luar biasa.", "image": "assets/img/testimonials/testimonials-1.jpg", "name": "Budi Santoso", "role": "Project Manager" },
+      { "quote": "Arsitektur kode yang dibuat George sangat rapi dan mudah untuk dikembangkan lebih lanjut oleh tim. Sangat profesional.", "image": "assets/img/testimonials/testimonials-2.jpg", "name": "Citra Dewi", "role": "Lead Backend" },
+      { "quote": "Sangat senang bekerja dengan George. Dia tidak hanya ahli secara teknis, tetapi juga seorang komunikator yang hebat.", "image": "assets/img/testimonials/testimonials-3.jpg", "name": "Rina Wulandari", "role": "UI/UX Designer" }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Jangan ragu untuk menghubungi saya untuk diskusi proyek, peluang kolaborasi, atau sekadar bertanya. Saya siap membantu Anda.",
+    "location": { "label": "Location:", "value": "Jakarta, Indonesia" },
+    "email": { "label": "Email:", "value": "george.rich.project@gmail.com" },
+    "call": { "label": "Call:", "value": "+62 821 9078 2029" },
+    "map_url": "http://googleusercontent.com/maps.google.com/4"
+  }
+}
