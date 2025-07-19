@@ -4,7 +4,7 @@
     // Wait for the DOM to be fully loaded before trying to manipulate it
     document.addEventListener('DOMContentLoaded', function() {
         // Fetch data.json with a cache-busting timestamp to ensure the latest version is always fetched
-        fetch('./assets/database/data.json?v=' + new Date().getTime())
+        fetch('./assets/database/data.json')
             .then(response => {
                 // Check if the network request was successful (status 200-299)
                 if (!response.ok) {
