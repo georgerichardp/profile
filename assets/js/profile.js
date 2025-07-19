@@ -12,25 +12,25 @@
             // --- Data Loading Functions ---
             // These functions populate the HTML elements with data from the JSON file.
 
-            function loadHeader(profile, navigation) {
-                const container = document.getElementById('header-profile-container');
-                if (!container) {
-                    console.error('Header profile container not found!');
-                    return;
-                }
-                const socialLinksHtml = profile.social.map(s => `<a href="${s.url}" class="${s.name}" target="_blank"><i class="${s.icon}"></i></a>`).join('');
-                const navMenuHtml = navigation.map(n => `<li class="${n.active ? 'active' : ''}"><a href="${n.href}"><i class="${n.icon}"></i> <span>${n.text}</span></a></li>`).join('');
-                container.innerHTML = `
-                        <div class="profile">
-                            <img src="${profile.image}" alt="" class="img-fluid rounded-circle">
-                            <h1 class="text-light"><a href="index.html">${profile.name}</a></h1>
-                            <div class="social-links mt-3 text-center">${socialLinksHtml}</div>
-                        </div>
-                        <nav class="nav-menu">
-                            <ul>${navMenuHtml}</ul>
-                        </nav>
-                        <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>`;
-            }
+            // function loadHeader(profile, navigation) {
+            //     const container = document.getElementById('header-profile-container');
+            //     if (!container) {
+            //         console.error('Header profile container not found!');
+            //         return;
+            //     }
+            //     const socialLinksHtml = profile.social.map(s => `<a href="${s.url}" class="${s.name}" target="_blank"><i class="${s.icon}"></i></a>`).join('');
+            //     const navMenuHtml = navigation.map(n => `<li class="${n.active ? 'active' : ''}"><a href="${n.href}"><i class="${n.icon}"></i> <span>${n.text}</span></a></li>`).join('');
+            //     container.innerHTML = `
+            //             <div class="profile">
+            //                 <img src="${profile.image}" alt="" class="img-fluid rounded-circle">
+            //                 <h1 class="text-light"><a href="index.html">${profile.name}</a></h1>
+            //                 <div class="social-links mt-3 text-center">${socialLinksHtml}</div>
+            //             </div>
+            //             <nav class="nav-menu">
+            //                 <ul>${navMenuHtml}</ul>
+            //             </nav>
+            //             <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>`;
+            // }
 
             function loadHero(hero) {
                 const heroName = document.getElementById('hero-name');
@@ -190,24 +190,24 @@
                 }
             }
 
-            function loadTestimonials(testimonials) {
-                const testimonialsTitle = document.getElementById('testimonials-title');
-                const testimonialsDescription = document.getElementById('testimonials-description');
-                const container = document.getElementById('testimonials-container');
-
-                if (testimonialsTitle) testimonialsTitle.textContent = testimonials.title;
-                if (testimonialsDescription) testimonialsDescription.textContent = testimonials.description;
-
-                if (container) {
-                    container.innerHTML = testimonials.items.map((item, index) => `
-                            <div class="testimonial-item" data-aos="fade-up" data-aos-delay="${index * 100}">
-                                <p><i class="bx bxs-quote-alt-left quote-icon-left"></i>${item.quote}<i class="bx bxs-quote-alt-right quote-icon-right"></i></p>
-                                <img src="${item.image}" class="testimonial-img" alt="">
-                                <h3>${item.name}</h3>
-                                <h4>${item.role}</h4>
-                            </div>`).join('');
-                }
-            }
+            // function loadTestimonials(testimonials) {
+            //     const testimonialsTitle = document.getElementById('testimonials-title');
+            //     const testimonialsDescription = document.getElementById('testimonials-description');
+            //     const container = document.getElementById('testimonials-container');
+            //
+            //     if (testimonialsTitle) testimonialsTitle.textContent = testimonials.title;
+            //     if (testimonialsDescription) testimonialsDescription.textContent = testimonials.description;
+            //
+            //     if (container) {
+            //         container.innerHTML = testimonials.items.map((item, index) => `
+            //                 <div class="testimonial-item" data-aos="fade-up" data-aos-delay="${index * 100}">
+            //                     <p><i class="bx bxs-quote-alt-left quote-icon-left"></i>${item.quote}<i class="bx bxs-quote-alt-right quote-icon-right"></i></p>
+            //                     <img src="${item.image}" class="testimonial-img" alt="">
+            //                     <h3>${item.name}</h3>
+            //                     <h4>${item.role}</h4>
+            //                 </div>`).join('');
+            //     }
+            // }
 
             function loadContact(contact) {
                 const contactTitle = document.getElementById('contact-title');
@@ -230,7 +230,7 @@
 
             // --- MAIN EXECUTION FLOW ---
             // Call all loading functions with the fetched data
-            loadHeader(data.profile, data.navigation); // Added this missing call! ✅
+            // loadHeader(data.profile, data.navigation); // Added this missing call! ✅
             loadHero(data.hero);
             loadAbout(data.about, data.profile.image);
             loadFacts(data.facts);
