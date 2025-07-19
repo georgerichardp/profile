@@ -1,6 +1,6 @@
 !(function($) {
     "use strict";
-    fetch('./assets/database/data.json')
+    fetch('./assets/database/data.json?v=' + new Date().getTime())
     .then(response => response.json())
     .then(data => {
         function loadHeader(profile, navigation) {
