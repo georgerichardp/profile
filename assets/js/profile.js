@@ -106,8 +106,7 @@
             <div class="portfolio-wrap">
               <img src="${item.image}" class="img-fluid" alt="${item.title}">
               <div class="portfolio-links">
-                <a href="${item.image}" data-gall="portfolioGallery" class="venobox" title="${item.title}"><i class="bx bx-plus"></i></a>
-                <a href="${item.detailsUrl}" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="${item.detailsUrl}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="More Details">See Detail<i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>`).join('');
@@ -136,11 +135,12 @@
         function loadContact(contact) {
             document.getElementById('contact-title').textContent = contact.title;
             document.getElementById('contact-description').textContent = contact.description;
-            document.getElementById('contact-info-container').innerHTML = `
-          <div class="address"><i class="icofont-google-map"></i><h4>${contact.location.label}</h4><p>${contact.location.value}</p></div>
-          <div class="email"><i class="icofont-envelope"></i><h4>${contact.email.label}</h4><p>${contact.email.value}</p></div>
-          <div class="phone"><i class="icofont-phone"></i><h4>${contact.call.label}</h4><p>${contact.call.value}</p></div>
-          <iframe src="${contact.map_url}" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>`;
+            document.getElementById('contact-location').textContent = contact.location;
+            document.getElementById('contact-email').textContent = contact.email;
+            document.getElementById('contact-phone').textContent = contact.call;
+            const container = document.getElementById('map-container');
+            container.innerHTML = `<iframe src="${contact.map_url}"
+                                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>`;
         }
 
         // --- ALUR EKSEKUSI UTAMA ---
@@ -154,7 +154,7 @@
         loadPortfolio(data.portfolio);
         loadServices(data.services);
         // loadTestimonials(data.testimonials);
-        // loadContact(data.contact);
+        loadContact(data.contact);
 
 
         // Panggil ulang main.js setelah data hero siap

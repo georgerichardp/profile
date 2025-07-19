@@ -3,13 +3,26 @@
     "name": "George Richard P.",
     "image": "assets/img/profile-img.jpg",
     "social": [
-      { "name": "twitter", "url": "https://x.com/georgerichard_p", "icon": "bx bxl-twitter" },
-      { "name": "linkedin", "url": "https://www.linkedin.com/in/george-richard-payara-64517521b/", "icon": "bx bxl-linkedin" }
+      {
+        "name": "twitter",
+        "url": "https://x.com/georgerichard_p",
+        "icon": "bx bxl-twitter"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/george-richard-payara-64517521b/",
+        "icon": "bx bxl-linkedin"
+      }
     ]
   },
   "hero": {
     "name": "George Richard P.",
-    "roles": ["Sr Mobile Developer", "Flutter Expert", "Team Lead", "Problem Solver"]
+    "roles": [
+      "Sr Mobile Developer",
+      "Flutter Expert",
+      "Team Lead",
+      "Problem Solver"
+    ]
   },
   "about": {
     "title": "About",
@@ -17,10 +30,22 @@
     "jobTitle": "Senior Mobile Developer",
     "introduction": "A proficient software engineer skilled in Object-Oriented Programming (OOP), adept at writing clean and structured code, experienced in designing robust and maintainable software architectures for mobile solutions—especially with Flutter—skilled in team management, creating project skeletons, developing core features, managing Git, performing code reviews, solving complex problems, and overseeing app deployments on both the App Store and Play Store.",
     "details": [
-      { "label": "Birthday", "value": "8 Feb 1995" },
-      { "label": "Phone", "value": "+62 821 9078 2029" },
-      { "label": "City", "value": "Jakarta" },
-      { "label": "Email", "value": "georgerichardpayara@gmail.com" }
+      {
+        "label": "Birthday",
+        "value": "8 Feb 1995"
+      },
+      {
+        "label": "Phone",
+        "value": "+62 821 9078 2029"
+      },
+      {
+        "label": "City",
+        "value": "Jakarta"
+      },
+      {
+        "label": "Email",
+        "value": "georgerichardpayara@gmail.com"
+      }
     ],
     "closing": "I’m excited to take on new challenges and collaborate on innovative projects. With strong mobile development skills and a commitment to quality, I’m ready to make a meaningful contribution to your team’s and company’s success."
   },
@@ -28,30 +53,64 @@
     "title": "Facts",
     "description": "Here are some achievements and statistics that highlight my experience and contributions across various projects I have worked on.",
     "items": [
-      { "icon": "icofont-simple-smile", "count": 15, "label": "Happy Clients" },
-      { "icon": "icofont-document-folder", "count": 20, "label": "Projects" },
-      { "icon": "icofont-live-support", "count": 2500, "label": "Hours Of Support" },
-      { "icon": "icofont-users-alt-5", "count": 8, "label": "Hard Workers" }
+      {
+        "icon": "icofont-simple-smile",
+        "count": 15,
+        "label": "Happy Clients"
+      },
+      {
+        "icon": "icofont-document-folder",
+        "count": 20,
+        "label": "Projects"
+      },
+      {
+        "icon": "icofont-live-support",
+        "count": 2500,
+        "label": "Hours Of Support"
+      },
+      {
+        "icon": "icofont-users-alt-5",
+        "count": 8,
+        "label": "Hard Workers"
+      }
     ]
   },
   "skills": {
     "title": "Skills",
-    "description": "A collection of my technical skills, covering various programming languages, frameworks, and tools that I master to develop efficient and high-quality software solutions.",
+    "description": "A collection of my core skills, including technical expertise in various programming languages, frameworks, and tools, as well as leadership capabilities in managing development teams, guiding architectural decisions, and ensuring efficient project execution from start to finish.",
     "items": [
-      { "name": "Flutter & Dart", "value": 95 },
-      { "name": "Swift & Kotlin", "value": 70 },
-      { "name": "CI/CD (Codemagic, Bitrise)", "value": 90 },
-      { "name": "SOLID Principle", "value": 95 },
-      { "name": "Clean Architecture", "value": 90 },
-      { "name": "Git", "value": 95 }
+      {
+        "name": "Flutter & Dart",
+        "value": 95
+      },
+      {
+        "name": "Swift & Kotlin",
+        "value": 70
+      },
+      {
+        "name": "SOLID Principle",
+        "value": 95
+      },
+      {
+        "name": "Clean Architecture",
+        "value": 90
+      },
+      {
+        "name": "Git",
+        "value": 95
+      },
+      {
+        "name": "Manage Team",
+        "value": 95
+      }
     ]
   },
   "resume": {
     "title": "Resume",
-    "description": "Jejak karir dan pendidikan saya, yang menggambarkan pengalaman profesional dan latar belakang akademis yang telah membentuk keahlian saya hingga saat ini.",
+    "description": "My career and educational journey, highlighting the professional experiences and academic background that have shaped my expertise to date.",
     "summary": {
       "name": "George Richard P.",
-      "content": "Pengembang Mobile Senior yang inovatif dan berorientasi pada hasil dengan pengalaman lebih dari 5 tahun dalam merancang, mengembangkan, dan mengelola aplikasi mobile yang kompleks. Terbukti mampu memimpin tim dan memberikan solusi teknis yang solid.",
+      "content": "An innovative and result-oriented Senior Mobile Developer with over 5 years of experience in designing, developing, and managing complex mobile applications. Proven ability to lead teams and deliver solid technical solutions.",
       "details": [
         "Jakarta, Indonesia",
         "+62 821 9078 2029",
@@ -60,79 +119,197 @@
     },
     "education": [
       {
-        "degree": "Sarjana Teknik Informatika",
-        "period": "2013 - 2017",
-        "institution": "Universitas Kristen Duta Wacana, Yogyakarta",
-        "description": "Fokus pada rekayasa perangkat lunak dan pengembangan aplikasi, membangun dasar yang kuat dalam algoritma, struktur data, dan paradigma pemrograman."
+        "degree": "Bachelor of Computer Engineering",
+        "period": "2014 - 2018",
+        "institution": "Satya Wacana Christian University, Salatiga",
+        "description": "Focused on software engineering and application development, building a strong foundation in algorithms, data structures, and programming paradigms."
+      },
+      {
+        "degree": "Vocational High School – Electronics",
+        "period": "2010 – 2013",
+        "institution": "SMK Negeri 4 Ambon, Ambon",
+        "description": "Studied electronics with practical experience in electrical systems, electronic circuits, measurements, and maintenance of electronic devices."
       }
     ],
     "experience": [
       {
-        "title": "Sr. Mobile Developer",
-        "period": "2021 - Sekarang",
-        "company": "PT. Suitmedia",
+        "title": "Technical Leader",
+        "period": "Mar 2022 - Present",
+        "company": "PT. Infosys Solusi Terpadu, Jakarta",
         "tasks": [
-          "Memimpin pengembangan aplikasi mobile menggunakan Flutter untuk berbagai klien.",
-          "Merancang arsitektur aplikasi dan memastikan kualitas kode melalui code review.",
-          "Berkolaborasi dengan tim UI/UX, backend, dan manajer proyek.",
-          "Mengelola proses rilis aplikasi ke Google Play Store dan Apple App Store."
+          "Pospay Mobile (PT. Pos Indonesia - Flutter):\nLed and managed the development team by coordinating tasks, guiding technical decisions, ensuring timely delivery and milestone adherence, addressing technical challenges with effective solutions, and overseeing app submissions and updates on both the App Store and Google Play.",
+          "JakOne Mobile (Mobile Banking - Bank DKI - Flutter):\nDirected the development team by overseeing project execution and ensuring timely delivery, designing and implementing core features and application architecture, managing version control, conducting code reviews, resolving technical issues, and overseeing app submissions and updates on the App Store and Google Play.",
+          "JakOne Pay (E-Wallet - Bank DKI - Flutter):\nDeveloped the initial application structure and core functionalities, provided technical support and resolved issues to enhance user experience, and managed app submissions and updates on the App Store and Google Play.",
+          "JConnect Mobile (Mobile Banking - Bank Jatim - Flutter):\nLed the development team by coordinating tasks and guiding technical decisions, created the foundational framework and developed essential features, supervised version control, conducted code reviews, addressed technical problems, and managed processes for App Store and Google Play submissions."
         ]
       },
       {
         "title": "Mobile Developer",
-        "period": "2018 - 2021",
-        "company": "PT. AINO INDONESIA",
+        "period": "Oct 2021 - Feb 2022",
+        "company": "PT. Megahmulia Mandiritama",
         "tasks": [
-          "Mengembangkan dan memelihara aplikasi e-money dan sistem pembayaran.",
-          "Menerapkan fitur-fitur baru berdasarkan kebutuhan bisnis.",
-          "Bekerja sama dalam tim untuk memecahkan masalah teknis yang kompleks."
+          "SalesTrax (Sales App - Flutter):\nDeveloped and implemented all features of the application using Flutter, directly coded the UI/UX to ensure a seamless and intuitive user experience, collaborated with the team to integrate backend services and optimize performance, and conducted thorough testing and debugging to meet quality standards."
         ]
+      },
+      {
+        "title": "Mobile Developer",
+        "period": "Sep 2020 – Sep 2021",
+        "company": "PT. Aivon Mediatama (Batavianet)",
+        "tasks": [
+          "Foodzilla Customer (Food Ordering App - Flutter): Developed all features of the FoodzillaCustomer food ordering application using Flutter, implementing the UI/UX directly from provided designs.",
+          "Foodzilla Merchant (Merchant Management App - Flutter): Developed all features of the FoodzillaMerchant application to support merchants in managing orders and menus, implementing the UI/UX directly from provided designs.",
+          "DPGPermit (Permit Application - Flutter): Collaborated on the development of the DPGPermit permit application using Flutter, implementing the UI/UX based on provided design specifications."
+        ]
+      },
+      {
+        "title": "Mobile Developer",
+        "period": "Mar 2019 – Sep 2020",
+        "company": "PT. Exi Global Aplikasi",
+        "tasks": [
+          "SISTesi (Teaching, Learning, and Student Attendance App - Flutter): Collaborated with the team to migrate the SISTesi application from Android Native to Flutter, developed features and implemented UI/UX based on provided designs.",
+          "SISTesi (Teaching, Learning, and Student Attendance App - Android Native): Developed all features for the SISTesi application using Android Native before the migration to Flutter, supported teaching, learning, and student attendance management, and implemented functionality and user interface based on design specifications.",
+          "POS Tiketing Gembira Loka Zoo (Ticketing App - JavaFX Desktop): Developed all features for the POS Tiketing Gembira Loka Zoo ticketing application using JavaFX, implementing functionality and user interface elements as per project requirements.",
+          "Mobile Hand Held RFID Gramedia (Book Stock Checking App - Android Native): Developed all features for the Mobile Hand Held RFID Gramedia application used for checking book stock at Gramedia stores using Android Native, and implemented functionality and user interface components as specified."
+        ]
+      },
+      {
+        "title": "Assistant Lecturer",
+        "period": "2016 - Feb 2018",
+        "company": "Universitas Kristen Satya Wacana",
+        "tasks": [
+          "Mobile Application Programming: Assisted in teaching and guiding students in mobile development.",
+          "Introduction to Computer Engineering: Taught basic computer system and programming concepts."
+        ]
+      },
+      {
+        "title": "Flutter Speaker",
+        "period": "2020",
+        "company": "Flutter Community Event",
+        "tasks": [
+          "Delivered an engaging presentation on Flutter, its benefits, and real-world applications.",
+          "Demonstrated Flutter for cross-platform development and answered audience questions.",
+          "Documentation link: https://www.instagram.com/p/CCkkjnPgRqI/?utm_source"
+        ]
+      },
+      {
+        "title": "Fungsionaris Bidang 1",
+        "period": "2016 - Feb 2017",
+        "company": "Senat Mahasiswa FTI UKSW",
+        "tasks": [
+          ]
       }
     ]
   },
+
   "portfolio": {
     "title": "Portfolio",
-    "description": "Koleksi proyek-proyek unggulan yang pernah saya kerjakan, menunjukkan kemampuan saya dalam mengembangkan berbagai jenis aplikasi mobile dengan teknologi terdepan.",
+    "description": "A curated collection of my most notable projects, showcasing my expertise in developing a wide range of mobile applications using cutting-edge technologies. These works reflect not only my technical skills but also my adaptability and commitment to delivering impactful digital solutions.\n\n",
     "filters": [
-      { "name": "Highlight", "filter": "*" },
-      { "name": "App", "filter": ".filter-app" },
-      { "name": "Web", "filter": ".filter-web" }
+      {
+        "name": "Highlight",
+        "filter": "*"
+      }
     ],
     "items": [
-      { "title": "Pospay", "category": "App", "image": "assets/img/portfolio/portfolio-pospay.jpeg", "detailsUrl": "portfolio-details.html" },
-      { "title": "Jakone Mobile", "category": "App", "image": "assets/img/portfolio/portfolio-jakone-mobile.jpeg", "detailsUrl": "portfolio-details.html" },
-      { "title": "Jakone Pay", "category": "App", "image": "assets/img/portfolio/portfolio-jakone-pay.jpeg", "detailsUrl": "portfolio-details.html" },
-      { "title": "Bank Jatim", "category": "App", "image": "assets/img/portfolio/portfolio-bank-jatim.jpeg", "detailsUrl": "portfolio-details.html" },
-      { "title": "SalesTrax", "category": "Web", "image": "assets/img/portfolio/portfolio-salestrax.png", "detailsUrl": "portfolio-details.html" }
+      {
+        "title": "Pospay",
+        "category": "App",
+        "image": "assets/img/portfolio/portfolio-pospay.jpeg",
+        "detailsUrl": "portfolio-details-flexible.html?database=assets/database/portfolio-pospay.json"
+      },
+      {
+        "title": "Jakone Mobile",
+        "category": "App",
+        "image": "assets/img/portfolio/portfolio-jakone-mobile.jpeg",
+        "detailsUrl": "portfolio-details-flexible.html?database=assets/database/portfolio-jakone-mobile.json"
+      },
+      {
+        "title": "Jakone Pay",
+        "category": "App",
+        "image": "assets/img/portfolio/portfolio-jakone-pay.jpeg",
+        "detailsUrl": "portfolio-details-flexible.html?database=assets/database/portfolio-jakone-pay.json"
+      },
+      {
+        "title": "Bank Jatim",
+        "category": "App",
+        "image": "assets/img/portfolio/portfolio-bank-jatim.jpeg",
+        "detailsUrl": "portfolio-details-flexible.html?database=assets/database/portfolio-bank-jatim.json"
+      },
+      {
+        "title": "SalesTrax",
+        "category": "Web",
+        "image": "assets/img/portfolio/portfolio-salestrax.png",
+        "detailsUrl": "portfolio-details-flexible.html?database=assets/database/portfolio-salestrax.json"
+      }
     ]
   },
   "services": {
     "title": "Services",
-    "description": "Layanan profesional yang saya tawarkan, berfokus pada pengembangan aplikasi mobile, konsultasi arsitektur, dan manajemen siklus hidup aplikasi untuk membantu bisnis Anda mencapai tujuan digitalnya.",
+    "description": "Professional services I offer, focusing on mobile app development, software architecture consulting, and application lifecycle management to help your business achieve its digital goals.",
     "items": [
-      { "icon": "bi bi-phone", "title": "Mobile App Development", "description": "Pengembangan aplikasi cross-platform dengan Flutter untuk iOS dan Android, fokus pada performa, skalabilitas, dan user experience." },
-      { "icon": "icofont-architecture-alt", "title": "Software Architecture", "description": "Merancang arsitektur aplikasi yang bersih, modular, dan mudah dipelihara (Clean Architecture, SOLID) untuk proyek jangka panjang." },
-      { "icon": "icofont-code-alt", "title": "Code Review & Refactoring", "description": "Menganalisis dan meningkatkan kualitas basis kode yang sudah ada untuk performa dan keterbacaan yang lebih baik." },
-      { "icon": "icofont-people", "title": "Team Leadership", "description": "Memimpin dan membimbing tim developer, mengatur alur kerja Git, dan memastikan kolaborasi yang efektif." },
-      { "icon": "icofont-cloud-upload", "title": "App Deployment", "description": "Manajemen penuh untuk proses rilis dan pembaruan aplikasi di Google Play Store dan Apple App Store, termasuk CI/CD." },
-      { "icon": "icofont-gears", "title": "Technical Consultation", "description": "Memberikan konsultasi teknis untuk membantu Anda memilih teknologi dan pendekatan terbaik untuk proyek mobile Anda." }
+      {
+        "icon": "bi bi-phone",
+        "title": "Mobile App Development",
+        "description": "Cross-platform app development using Flutter for iOS and Android, focusing on performance, scalability, and user experience."
+      },
+      {
+        "icon": "icofont-architecture-alt",
+        "title": "Software Architecture",
+        "description": "Designing clean, modular, and maintainable application architectures (Clean Architecture, SOLID) for long-term projects."
+      },
+      {
+        "icon": "icofont-code-alt",
+        "title": "Code Review & Refactoring",
+        "description": "Analyzing and improving existing codebases for better performance and readability."
+      },
+      {
+        "icon": "icofont-people",
+        "title": "Team Leadership",
+        "description": "Leading and mentoring developer teams, managing Git workflows, and ensuring effective collaboration."
+      },
+      {
+        "icon": "icofont-cloud-upload",
+        "title": "App Deployment",
+        "description": "End-to-end management of app release and update processes on Google Play Store and Apple App Store"
+      },
+      {
+        "icon": "icofont-gears",
+        "title": "Technical Consultation",
+        "description": "Providing technical advice to help you choose the best technologies and approaches for your mobile project."
+      }
     ]
   },
+
   "testimonials": {
     "title": "Testimonials",
     "description": "Apa kata mereka yang pernah bekerja sama dengan saya. Testimoni ini memberikan gambaran tentang etos kerja, keahlian, dan kontribusi saya dalam sebuah tim.",
     "items": [
-      { "quote": "George adalah seorang developer yang sangat handal dan cepat belajar. Kemampuannya dalam memecahkan masalah sangat luar biasa.", "image": "assets/img/testimonials/testimonials-1.jpg", "name": "Budi Santoso", "role": "Project Manager" },
-      { "quote": "Arsitektur kode yang dibuat George sangat rapi dan mudah untuk dikembangkan lebih lanjut oleh tim. Sangat profesional.", "image": "assets/img/testimonials/testimonials-2.jpg", "name": "Citra Dewi", "role": "Lead Backend" },
-      { "quote": "Sangat senang bekerja dengan George. Dia tidak hanya ahli secara teknis, tetapi juga seorang komunikator yang hebat.", "image": "assets/img/testimonials/testimonials-3.jpg", "name": "Rina Wulandari", "role": "UI/UX Designer" }
+      {
+        "quote": "George adalah seorang developer yang sangat handal dan cepat belajar. Kemampuannya dalam memecahkan masalah sangat luar biasa.",
+        "image": "assets/img/testimonials/testimonials-1.jpg",
+        "name": "Budi Santoso",
+        "role": "Project Manager"
+      },
+      {
+        "quote": "Arsitektur kode yang dibuat George sangat rapi dan mudah untuk dikembangkan lebih lanjut oleh tim. Sangat profesional.",
+        "image": "assets/img/testimonials/testimonials-2.jpg",
+        "name": "Citra Dewi",
+        "role": "Lead Backend"
+      },
+      {
+        "quote": "Sangat senang bekerja dengan George. Dia tidak hanya ahli secara teknis, tetapi juga seorang komunikator yang hebat.",
+        "image": "assets/img/testimonials/testimonials-3.jpg",
+        "name": "Rina Wulandari",
+        "role": "UI/UX Designer"
+      }
     ]
   },
   "contact": {
     "title": "Contact",
     "description": "Jangan ragu untuk menghubungi saya untuk diskusi proyek, peluang kolaborasi, atau sekadar bertanya. Saya siap membantu Anda.",
-    "location": { "label": "Location:", "value": "Jakarta, Indonesia" },
-    "email": { "label": "Email:", "value": "george.rich.project@gmail.com" },
-    "call": { "label": "Call:", "value": "+62 821 9078 2029" },
-    "map_url": "http://googleusercontent.com/maps.google.com/4"
+    "location": "Jakarta, Indonesia",
+    "email": "george.rich.project@gmail.com",
+    "call": "+62 821 9078 2029",
+    "map_url": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12097.433213460943!2d106.82471148170048!3d-6.20551397194474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1721392943000"
   }
 }

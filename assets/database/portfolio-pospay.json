@@ -1,0 +1,23 @@
+{
+  "title": "Portfolio Details",
+  "breadcrumbsTitle": "Pospay Mobile",
+  "carouselImages": [
+    "assets/img/portfolio/portfolio-jakone-mobile.jpeg",
+    "assets/img/portfolio/portfolio-bank-jatim.jpeg",
+    "assets/img/portfolio/portfolio-jakone-pay.jpeg",
+    "assets/img/portfolio/portfolio-pospay.jpeg",
+    "assets/img/portfolio/portfolio-pospay.jpeg",
+    "assets/img/portfolio/portfolio-pospay.jpeg"
+  ],
+  "projectInfo": {
+    "category": "Web design",
+    "client": "ASU Company",
+    "date": "01 March, 2020",
+    "url_ios": "https://apps.apple.com/id/app/pospay-mobile/id6502898460",
+    "url_android": "https://www.example.com"
+  },
+  "description": {
+    "title": "This is an example of portfolio detail",
+    "content": "Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius."
+  }
+}
