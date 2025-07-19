@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "George Richard P.",
-    "image": "assets/img/portfolio/portfolio-1.jpg",
+    "image": "assets/img/profile-img.jpg",
     "social": [
       { "name": "twitter", "url": "https://x.com/georgerichard_p", "icon": "bx bxl-twitter" },
       { "name": "linkedin", "url": "https://www.linkedin.com/in/george-richard-payara-64517521b/", "icon": "bx bxl-linkedin" }
@@ -99,11 +99,11 @@
       { "name": "Web", "filter": ".filter-web" }
     ],
     "items": [
-      { "title": "Pospay", "category": "App", "image": "assets/img/portfolio/portfolio-1.jpg", "detailsUrl": "portfolio-details.html" },
-      { "title": "Jakone Mobile", "category": "App", "image": "assets/img/portfolio/portfolio-1.jpg", "detailsUrl": "portfolio-details.html" },
-      { "title": "Jakone Pay", "category": "App", "image": "assets/img/portfolio/portfolio-1.jpg", "detailsUrl": "portfolio-details.html" },
-      { "title": "Bank Jatim", "category": "App", "image": "assets/img/portfolio/portfolio-1.jpg", "detailsUrl": "portfolio-details.html" },
-      { "title": "SalesTrax", "category": "Web", "image": "assets/img/portfolio/portfolio-1.jpg", "detailsUrl": "portfolio-details.html" }
+      { "title": "Pospay", "category": "App", "image": "assets/img/portfolio/portfolio-pospay.jpeg", "detailsUrl": "portfolio-details.html" },
+      { "title": "Jakone Mobile", "category": "App", "image": "assets/img/portfolio/portfolio-jakone-mobile.jpeg", "detailsUrl": "portfolio-details.html" },
+      { "title": "Jakone Pay", "category": "App", "image": "assets/img/portfolio/portfolio-jakone-pay.jpeg", "detailsUrl": "portfolio-details.html" },
+      { "title": "Bank Jatim", "category": "App", "image": "assets/img/portfolio/portfolio-bank-jatim.jpeg", "detailsUrl": "portfolio-details.html" },
+      { "title": "SalesTrax", "category": "Web", "image": "assets/img/portfolio/portfolio-salestrax.png", "detailsUrl": "portfolio-details.html" }
     ]
   },
   "services": {
