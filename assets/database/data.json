@@ -221,25 +221,25 @@
         "title": "Jakone Mobile",
         "category": "App",
         "image": "assets/img/portfolio/portfolio-jakone-mobile.jpeg",
-        "detailsUrl": "portfolio-details-flexible.html?database=assets/database/portfolio-jakone-mobile.json"
+        "detailsUrl": "portfolio-details-flexible.html"
       },
       {
         "title": "Jakone Pay",
         "category": "App",
         "image": "assets/img/portfolio/portfolio-jakone-pay.jpeg",
-        "detailsUrl": "portfolio-details-flexible.html?database=assets/database/portfolio-jakone-pay.json"
+        "detailsUrl": "portfolio-details-flexible.html"
       },
       {
         "title": "Bank Jatim",
         "category": "App",
         "image": "assets/img/portfolio/portfolio-bank-jatim.jpeg",
-        "detailsUrl": "portfolio-details-flexible.html?database=assets/database/portfolio-bank-jatim.json"
+        "detailsUrl": "portfolio-details-flexible.html"
       },
       {
         "title": "SalesTrax",
         "category": "Web",
         "image": "assets/img/portfolio/portfolio-salestrax.png",
-        "detailsUrl": "portfolio-details-flexible.html?database=assets/database/portfolio-salestrax.json"
+        "detailsUrl": "portfolio-details-flexible.html"
       }
     ]
   },
