@@ -1,4 +1,4 @@
-!(function($) {
+$(document).ready(function () {
     "use strict";
     fetch('assets/database/data.json')
     .then(response => response.json())
