@@ -146,7 +146,7 @@
         // --- ALUR EKSEKUSI UTAMA ---
 
         // 1. Muat semua konten dari JSON ke dalam HTML
-        loadHero(data.hero);
+        // loadHero(data.hero);
         loadAbout(data.about, data.profile.image);
         loadFacts(data.facts);
         loadSkills(data.skills);
