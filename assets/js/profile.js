@@ -1,8 +1,32 @@
 $(document).ready(function () {
     "use strict";
-    fetch('assets/database/data.json')
-    .then(response => response.json())
-    .then(data => {
+    let loadedData = null; // tetap lokal, tidak global
+
+    if (
+        loadedData !== null
+    ) {
+        initWithData();
+    } else {
+        if (
+            window.location.pathname.includes("index.html") ||
+            window.location.pathname === "/" ||
+            window.location.pathname === ""
+        ) {
+            fetch("assets/database/data.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    loadedData = data; // simpan secara lokal
+                    initWithData();
+                })
+                .catch((error) =>
+                    console.error("Gagal load data JSON:", error)
+                );
+        } else {
+            console.log("Bukan halaman index, profile.js tidak dijalankan.");
+        }
+    }
+    function initWithData(){
+        const data = loadedData
         function loadHeader(profile, navigation) {
             const container = document.getElementById('header-profile-container');
             const socialLinksHtml = profile.social.map(s => `<a href="${s.url}" class="${s.name}" target="_blank"><i class="${s.icon}"></i></a>`).join('');
@@ -161,7 +185,5 @@ $(document).ready(function () {
         var script = document.createElement('script');
         script.src = 'assets/js/main.js';
         document.body.appendChild(script);
-        //panggil main js di sini
-})
-    .catch(error => console.error('Gagal load JSON:', error));
+    }
 })(jQuery);
