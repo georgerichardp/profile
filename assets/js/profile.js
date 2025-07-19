@@ -1,5 +1,6 @@
 !(function($) {
     "use strict";
+    var loadedData = null;
 
     // Wait for the DOM to be fully loaded before trying to manipulate it
     document.addEventListener('DOMContentLoaded', function() {
@@ -244,21 +245,24 @@
                 loadServices(data.services);
                 // loadTestimonials(data.testimonials); // Commented out based on your original code
                 loadContact(data.contact);
+                if(loadedData == null){
+                    // Dynamically load main.js AFTER all content has been populated.
+                    // This ensures that main.js can correctly initialize UI components
+                    // like Typed.js, Counter-Up, AOS, etc., which depend on the content being present.
+                    const mainScript = document.createElement('script');
+                    mainScript.src = 'assets/js/main.js';
+                    mainScript.onload = () => {
+                        // Optional: Add a console log to confirm main.js loaded
+                        console.log('main.js loaded and ready.');
+                        // If main.js contains specific initialization functions,
+                        // you might call them here if they are exposed globally.
+                        // For example, if main.js has a function initTheme(), you might call:
+                        // if (typeof initTheme === 'function') initTheme();
+                    };
+                    document.body.appendChild(mainScript);
+                }
 
-                // Dynamically load main.js AFTER all content has been populated.
-                // This ensures that main.js can correctly initialize UI components
-                // like Typed.js, Counter-Up, AOS, etc., which depend on the content being present.
-                const mainScript = document.createElement('script');
-                mainScript.src = 'assets/js/main.js';
-                mainScript.onload = () => {
-                    // Optional: Add a console log to confirm main.js loaded
-                    console.log('main.js loaded and ready.');
-                    // If main.js contains specific initialization functions,
-                    // you might call them here if they are exposed globally.
-                    // For example, if main.js has a function initTheme(), you might call:
-                    // if (typeof initTheme === 'function') initTheme();
-                };
-                document.body.appendChild(mainScript);
+                loadedData = data;
             })
             .catch(error => {
                 console.error('Failed to load JSON data:', error);
