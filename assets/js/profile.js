@@ -142,6 +142,17 @@
         function loadHero(hero) {
             document.getElementById('hero-name').textContent = hero.name;
             document.getElementById('hero-roles').setAttribute('data-typed-items', hero.roles.join(','));
+            if ($('.typed').length) {
+                var typed_strings = $(".typed").data('typed-items');
+                typed_strings = typed_strings.split(',')
+                new Typed('.typed', {
+                    strings: typed_strings,
+                    loop: true,
+                    typeSpeed: 100,
+                    backSpeed: 50,
+                    backDelay: 2000
+                });
+            }
         }
         function loadAbout(about, image) {
             document.getElementById('about-title').textContent = about.title;
