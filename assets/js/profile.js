@@ -1,11 +1,8 @@
-document.addEventListener("DOMContentLoaded", async function () {
+!(function($) {
     "use strict";
-
-
-    const response = await fetch("./assets/database/data.json");
-    const data = await response.json();
-    initWithData(data);
-    function initWithData(data){
+    fetch('./assets/database/data.json')
+    .then(response => response.json())
+    .then(data => {
         function loadHeader(profile, navigation) {
             const container = document.getElementById('header-profile-container');
             const socialLinksHtml = profile.social.map(s => `<a href="${s.url}" class="${s.name}" target="_blank"><i class="${s.icon}"></i></a>`).join('');
@@ -164,5 +161,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         var script = document.createElement('script');
         script.src = 'assets/js/main.js';
         document.body.appendChild(script);
-    }
-});
+        //panggil main js di sini
+})
+    .catch(error => console.error('Gagal load JSON:', error));
+})(jQuery);
