@@ -23,8 +23,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             console.log("Bukan halaman index, profile.js tidak dijalankan.");
         }
     }
-    function initWithData(){
-        const data = loadedData
+    function initWithData(data){
         function loadHeader(profile, navigation) {
             const container = document.getElementById('header-profile-container');
             const socialLinksHtml = profile.social.map(s => `<a href="${s.url}" class="${s.name}" target="_blank"><i class="${s.icon}"></i></a>`).join('');
