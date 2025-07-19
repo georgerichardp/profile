@@ -1,28 +1,10 @@
 document.addEventListener("DOMContentLoaded", async function () {
     "use strict";
 
-    let loadedData = null;
 
-    if (loadedData !== null) {
-        initWithData(loadedData);
-    } else {
-        if (
-            window.location.pathname.includes("index.html") ||
-            window.location.pathname === "/" ||
-            window.location.pathname === ""
-        ) {
-            try {
-                const response = await fetch("./assets/database/data.json");
-                const data = await response.json();
-                loadedData = data;
-                initWithData(data);
-            } catch (error) {
-                console.error("Gagal load data JSON:", error);
-            }
-        } else {
-            console.log("Bukan halaman index, profile.js tidak dijalankan.");
-        }
-    }
+    const response = await fetch("./assets/database/data.json");
+    const data = await response.json();
+    initWithData(data);
     function initWithData(data){
         function loadHeader(profile, navigation) {
             const container = document.getElementById('header-profile-container');
