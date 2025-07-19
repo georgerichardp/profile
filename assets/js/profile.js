@@ -138,9 +138,9 @@
             document.getElementById('contact-location').textContent = contact.location;
             document.getElementById('contact-email').textContent = contact.email;
             document.getElementById('contact-phone').textContent = contact.call;
-            const container = document.getElementById('map-container');
-            container.innerHTML = `<iframe src="${contact.map_url}"
-                                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>`;
+            // const container = document.getElementById('map-container');
+            // container.innerHTML = `<iframe src="${contact.map_url}"
+            //                     frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>`;
         }
 
         // --- ALUR EKSEKUSI UTAMA ---
