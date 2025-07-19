@@ -1,40 +1,148 @@
-!(function ($) {
+!(function($) {
     "use strict";
-    const firebaseConfig = {
-        apiKey: "AIzaSyBmOwSOy-dFd0lczblOHTO3EandGxxMGCs",
-        authDomain: "profile-f1b63.firebaseapp.com",
-        databaseURL: "https://profile-f1b63-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "profile-f1b63",
-        storageBucket: "profile-f1b63.firebasestorage.app",
-        messagingSenderId: "79907423697",
-        appId: "1:79907423697:web:f26e69d2b42c71cf96ccf0",
-        measurementId: "G-QP5QPDH6VF"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-    db.ref('portfolioSite').once('value').then(snapshot => {
-        const data = snapshot.val();
-        function loadHeader(profile, navigation) {
-            const container = document.getElementById('header-profile-container');
-            const socialLinksHtml = profile.social.map(s => `<a href="${s.url}" class="${s.name}" target="_blank"><i class="${s.icon}"></i></a>`).join('');
-            const navMenuHtml = navigation.map(n => `<li class="${n.active ? 'active' : ''}"><a href="${n.href}"><i class="${n.icon}"></i> <span>${n.text}</span></a></li>`).join('');
-            container.innerHTML = `
-          <div class="profile">
-            <img src="${profile.image}" alt="" class="img-fluid rounded-circle">
-            <h1 class="text-light"><a href="index.html">${profile.name}</a></h1>
-            <div class="social-links mt-3 text-center">${socialLinksHtml}</div>
-          </div>
-          <nav class="nav-menu">
-            <ul>${navMenuHtml}</ul>
-          </nav>
-          <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>`;
-        }
-
+    document.addEventListener("DOMContentLoaded", () => {
+        const data = {
+            "profile": {
+                "name": "George Richard P.",
+                "image": "assets/img/profile-img.jpg",
+                "social": [
+                    { "name": "twitter", "url": "https://x.com/georgerichard_p", "icon": "bx bxl-twitter" },
+                    { "name": "linkedin", "url": "https://www.linkedin.com/in/george-richard-payara-64517521b/", "icon": "bx bxl-linkedin" }
+                ]
+            },
+            "hero": {
+                "name": "George Richard P.",
+                "roles": ["Sr Mobile Developer", "Flutter Expert", "Team Lead", "Problem Solver"]
+            },
+            "about": {
+                "title": "About",
+                "description": "I’m from Maluku, Indonesia — far from the tech hubs, but deeply passionate about IT, especially mobile app development. Right now, I mainly build apps using Flutter, focusing on clean, efficient code and great user experience.",
+                "jobTitle": "Senior Mobile Developer",
+                "introduction": "A proficient software engineer skilled in Object-Oriented Programming (OOP), adept at writing clean and structured code, experienced in designing robust and maintainable software architectures for mobile solutions—especially with Flutter—skilled in team management, creating project skeletons, developing core features, managing Git, performing code reviews, solving complex problems, and overseeing app deployments on both the App Store and Play Store.",
+                "details": [
+                    { "label": "Birthday", "value": "8 Feb 1995" },
+                    { "label": "Phone", "value": "+62 821 9078 2029" },
+                    { "label": "City", "value": "Jakarta" },
+                    { "label": "Email", "value": "georgerichardpayara@gmail.com" }
+                ],
+                "closing": "I’m excited to take on new challenges and collaborate on innovative projects. With strong mobile development skills and a commitment to quality, I’m ready to make a meaningful contribution to your team’s and company’s success."
+            },
+            "facts": {
+                "title": "Facts",
+                "description": "Here are some achievements and statistics that highlight my experience and contributions across various projects I have worked on.",
+                "items": [
+                    { "icon": "icofont-simple-smile", "count": 15, "label": "Happy Clients" },
+                    { "icon": "icofont-document-folder", "count": 20, "label": "Projects" },
+                    { "icon": "icofont-live-support", "count": 2500, "label": "Hours Of Support" },
+                    { "icon": "icofont-users-alt-5", "count": 8, "label": "Hard Workers" }
+                ]
+            },
+            "skills": {
+                "title": "Skills",
+                "description": "A collection of my technical skills, covering various programming languages, frameworks, and tools that I master to develop efficient and high-quality software solutions.",
+                "items": [
+                    { "name": "Flutter & Dart", "value": 95 },
+                    { "name": "Swift & Kotlin", "value": 70 },
+                    { "name": "CI/CD (Codemagic, Bitrise)", "value": 90 },
+                    { "name": "SOLID Principle", "value": 95 },
+                    { "name": "Clean Architecture", "value": 90 },
+                    { "name": "Git", "value": 95 }
+                ]
+            },
+            "resume": {
+                "title": "Resume",
+                "description": "Jejak karir dan pendidikan saya, yang menggambarkan pengalaman profesional dan latar belakang akademis yang telah membentuk keahlian saya hingga saat ini.",
+                "summary": {
+                    "name": "George Richard P.",
+                    "content": "Pengembang Mobile Senior yang inovatif dan berorientasi pada hasil dengan pengalaman lebih dari 5 tahun dalam merancang, mengembangkan, dan mengelola aplikasi mobile yang kompleks. Terbukti mampu memimpin tim dan memberikan solusi teknis yang solid.",
+                    "details": [
+                        "Jakarta, Indonesia",
+                        "+62 821 9078 2029",
+                        "georgerichardpayara@gmail.com"
+                    ]
+                },
+                "education": [
+                    {
+                        "degree": "Sarjana Teknik Informatika",
+                        "period": "2013 - 2017",
+                        "institution": "Universitas Kristen Duta Wacana, Yogyakarta",
+                        "description": "Fokus pada rekayasa perangkat lunak dan pengembangan aplikasi, membangun dasar yang kuat dalam algoritma, struktur data, dan paradigma pemrograman."
+                    }
+                ],
+                "experience": [
+                    {
+                        "title": "Sr. Mobile Developer",
+                        "period": "2021 - Sekarang",
+                        "company": "PT. Suitmedia",
+                        "tasks": [
+                            "Memimpin pengembangan aplikasi mobile menggunakan Flutter untuk berbagai klien.",
+                            "Merancang arsitektur aplikasi dan memastikan kualitas kode melalui code review.",
+                            "Berkolaborasi dengan tim UI/UX, backend, dan manajer proyek.",
+                            "Mengelola proses rilis aplikasi ke Google Play Store dan Apple App Store."
+                        ]
+                    },
+                    {
+                        "title": "Mobile Developer",
+                        "period": "2018 - 2021",
+                        "company": "PT. AINO INDONESIA",
+                        "tasks": [
+                            "Mengembangkan dan memelihara aplikasi e-money dan sistem pembayaran.",
+                            "Menerapkan fitur-fitur baru berdasarkan kebutuhan bisnis.",
+                            "Bekerja sama dalam tim untuk memecahkan masalah teknis yang kompleks."
+                        ]
+                    }
+                ]
+            },
+            "portfolio": {
+                "title": "Portfolio",
+                "description": "Koleksi proyek-proyek unggulan yang pernah saya kerjakan, menunjukkan kemampuan saya dalam mengembangkan berbagai jenis aplikasi mobile dengan teknologi terdepan.",
+                "filters": [
+                    { "name": "Highlight", "filter": "*" },
+                    { "name": "App", "filter": ".filter-app" },
+                    { "name": "Web", "filter": ".filter-web" }
+                ],
+                "items": [
+                    { "title": "Pospay", "category": "App", "image": "assets/img/portfolio/portfolio-pospay.jpeg", "detailsUrl": "portfolio-details.html" },
+                    { "title": "Jakone Mobile", "category": "App", "image": "assets/img/portfolio/portfolio-jakone-mobile.jpeg", "detailsUrl": "portfolio-details.html" },
+                    { "title": "Jakone Pay", "category": "App", "image": "assets/img/portfolio/portfolio-jakone-pay.jpeg", "detailsUrl": "portfolio-details.html" },
+                    { "title": "Bank Jatim", "category": "App", "image": "assets/img/portfolio/portfolio-bank-jatim.jpeg", "detailsUrl": "portfolio-details.html" },
+                    { "title": "SalesTrax", "category": "Web", "image": "assets/img/portfolio/portfolio-salestrax.png", "detailsUrl": "portfolio-details.html" }
+                ]
+            },
+            "services": {
+                "title": "Services",
+                "description": "Layanan profesional yang saya tawarkan, berfokus pada pengembangan aplikasi mobile, konsultasi arsitektur, dan manajemen siklus hidup aplikasi untuk membantu bisnis Anda mencapai tujuan digitalnya.",
+                "items": [
+                    { "icon": "bi bi-phone", "title": "Mobile App Development", "description": "Pengembangan aplikasi cross-platform dengan Flutter untuk iOS dan Android, fokus pada performa, skalabilitas, dan user experience." },
+                    { "icon": "icofont-architecture-alt", "title": "Software Architecture", "description": "Merancang arsitektur aplikasi yang bersih, modular, dan mudah dipelihara (Clean Architecture, SOLID) untuk proyek jangka panjang." },
+                    { "icon": "icofont-code-alt", "title": "Code Review & Refactoring", "description": "Menganalisis dan meningkatkan kualitas basis kode yang sudah ada untuk performa dan keterbacaan yang lebih baik." },
+                    { "icon": "icofont-people", "title": "Team Leadership", "description": "Memimpin dan membimbing tim developer, mengatur alur kerja Git, dan memastikan kolaborasi yang efektif." },
+                    { "icon": "icofont-cloud-upload", "title": "App Deployment", "description": "Manajemen penuh untuk proses rilis dan pembaruan aplikasi di Google Play Store dan Apple App Store, termasuk CI/CD." },
+                    { "icon": "icofont-gears", "title": "Technical Consultation", "description": "Memberikan konsultasi teknis untuk membantu Anda memilih teknologi dan pendekatan terbaik untuk proyek mobile Anda." }
+                ]
+            },
+            "testimonials": {
+                "title": "Testimonials",
+                "description": "Apa kata mereka yang pernah bekerja sama dengan saya. Testimoni ini memberikan gambaran tentang etos kerja, keahlian, dan kontribusi saya dalam sebuah tim.",
+                "items": [
+                    { "quote": "George adalah seorang developer yang sangat handal dan cepat belajar. Kemampuannya dalam memecahkan masalah sangat luar biasa.", "image": "assets/img/testimonials/testimonials-1.jpg", "name": "Budi Santoso", "role": "Project Manager" },
+                    { "quote": "Arsitektur kode yang dibuat George sangat rapi dan mudah untuk dikembangkan lebih lanjut oleh tim. Sangat profesional.", "image": "assets/img/testimonials/testimonials-2.jpg", "name": "Citra Dewi", "role": "Lead Backend" },
+                    { "quote": "Sangat senang bekerja dengan George. Dia tidak hanya ahli secara teknis, tetapi juga seorang komunikator yang hebat.", "image": "assets/img/testimonials/testimonials-3.jpg", "name": "Rina Wulandari", "role": "UI/UX Designer" }
+                ]
+            },
+            "contact": {
+                "title": "Contact",
+                "description": "Jangan ragu untuk menghubungi saya untuk diskusi proyek, peluang kolaborasi, atau sekadar bertanya. Saya siap membantu Anda.",
+                "location": { "label": "Location:", "value": "Jakarta, Indonesia" },
+                "email": { "label": "Email:", "value": "george.rich.project@gmail.com" },
+                "call": { "label": "Call:", "value": "+62 821 9078 2029" },
+                "map_url": "http://googleusercontent.com/maps.google.com/4"
+            }
+        };
         function loadHero(hero) {
             document.getElementById('hero-name').textContent = hero.name;
             document.getElementById('hero-roles').setAttribute('data-typed-items', hero.roles.join(','));
         }
-
         function loadAbout(about, image) {
             document.getElementById('about-title').textContent = about.title;
             document.getElementById('about-description').textContent = about.description;
@@ -49,7 +157,6 @@
           <div class="col-lg-6"><ul>${detailsHtml.slice(0, mid).join('')}</ul></div>
           <div class="col-lg-6"><ul>${detailsHtml.slice(mid).join('')}</ul></div>`;
         }
-
         function loadFacts(facts) {
             document.getElementById('facts-title').textContent = facts.title;
             document.getElementById('facts-description').textContent = facts.description;
@@ -63,7 +170,6 @@
             </div>
           </div>`).join('');
         }
-
         function loadSkills(skills) {
             document.getElementById('skills-title').textContent = skills.title;
             document.getElementById('skills-description').textContent = skills.description;
@@ -77,7 +183,6 @@
           </div>`).join('');
             container.innerHTML = `<div class="col-lg-6" data-aos="fade-up">${skillsHtml}</div>`;
         }
-
         function loadResume(resume) {
             document.getElementById('resume-title').textContent = resume.title;
             document.getElementById('resume-description').textContent = resume.description;
@@ -113,7 +218,6 @@
             ${experienceHtml}
           </div>`;
         }
-
         function loadPortfolio(portfolio) {
             document.getElementById('portfolio-title').textContent = portfolio.title;
             document.getElementById('portfolio-description').textContent = portfolio.description;
@@ -129,7 +233,6 @@
             </div>
           </div>`).join('');
         }
-
         function loadServices(services) {
             document.getElementById('services-title').textContent = services.title;
             document.getElementById('services-description').textContent = services.description;
@@ -140,7 +243,6 @@
             <p class="description">${item.description}</p>
           </div>`).join('');
         }
-
         function loadTestimonials(testimonials) {
             document.getElementById('testimonials-title').textContent = testimonials.title;
             document.getElementById('testimonials-description').textContent = testimonials.description;
@@ -152,7 +254,6 @@
             <h4>${item.role}</h4>
           </div>`).join('');
         }
-
         function loadContact(contact) {
             document.getElementById('contact-title').textContent = contact.title;
             document.getElementById('contact-description').textContent = contact.description;
@@ -181,7 +282,5 @@
         var script = document.createElement('script');
         script.src = 'assets/js/main.js';
         document.body.appendChild(script);
-        //panggil main js di sini
-    })
-        .catch(error => console.error('Gagal load JSON:', error));
+    });
 })(jQuery);
