@@ -1,8 +1,19 @@
-!(function($) {
+!(function ($) {
     "use strict";
-    fetch('assets/database/data.json')
-    .then(response => response.json())
-    .then(data => {
+    const firebaseConfig = {
+        apiKey: "AIzaSyBmOwSOy-dFd0lczblOHTO3EandGxxMGCs",
+        authDomain: "profile-f1b63.firebaseapp.com",
+        databaseURL: "https://profile-f1b63-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "profile-f1b63",
+        storageBucket: "profile-f1b63.firebasestorage.app",
+        messagingSenderId: "79907423697",
+        appId: "1:79907423697:web:f26e69d2b42c71cf96ccf0",
+        measurementId: "G-QP5QPDH6VF"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+    db.ref('portfolioSite').once('value').then(snapshot => {
+        const data = snapshot.val();
         function loadHeader(profile, navigation) {
             const container = document.getElementById('header-profile-container');
             const socialLinksHtml = profile.social.map(s => `<a href="${s.url}" class="${s.name}" target="_blank"><i class="${s.icon}"></i></a>`).join('');
@@ -18,10 +29,12 @@
           </nav>
           <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>`;
         }
+
         function loadHero(hero) {
             document.getElementById('hero-name').textContent = hero.name;
             document.getElementById('hero-roles').setAttribute('data-typed-items', hero.roles.join(','));
         }
+
         function loadAbout(about, image) {
             document.getElementById('about-title').textContent = about.title;
             document.getElementById('about-description').textContent = about.description;
@@ -36,6 +49,7 @@
           <div class="col-lg-6"><ul>${detailsHtml.slice(0, mid).join('')}</ul></div>
           <div class="col-lg-6"><ul>${detailsHtml.slice(mid).join('')}</ul></div>`;
         }
+
         function loadFacts(facts) {
             document.getElementById('facts-title').textContent = facts.title;
             document.getElementById('facts-description').textContent = facts.description;
@@ -49,6 +63,7 @@
             </div>
           </div>`).join('');
         }
+
         function loadSkills(skills) {
             document.getElementById('skills-title').textContent = skills.title;
             document.getElementById('skills-description').textContent = skills.description;
@@ -62,6 +77,7 @@
           </div>`).join('');
             container.innerHTML = `<div class="col-lg-6" data-aos="fade-up">${skillsHtml}</div>`;
         }
+
         function loadResume(resume) {
             document.getElementById('resume-title').textContent = resume.title;
             document.getElementById('resume-description').textContent = resume.description;
@@ -97,6 +113,7 @@
             ${experienceHtml}
           </div>`;
         }
+
         function loadPortfolio(portfolio) {
             document.getElementById('portfolio-title').textContent = portfolio.title;
             document.getElementById('portfolio-description').textContent = portfolio.description;
@@ -112,6 +129,7 @@
             </div>
           </div>`).join('');
         }
+
         function loadServices(services) {
             document.getElementById('services-title').textContent = services.title;
             document.getElementById('services-description').textContent = services.description;
@@ -122,6 +140,7 @@
             <p class="description">${item.description}</p>
           </div>`).join('');
         }
+
         function loadTestimonials(testimonials) {
             document.getElementById('testimonials-title').textContent = testimonials.title;
             document.getElementById('testimonials-description').textContent = testimonials.description;
@@ -133,6 +152,7 @@
             <h4>${item.role}</h4>
           </div>`).join('');
         }
+
         function loadContact(contact) {
             document.getElementById('contact-title').textContent = contact.title;
             document.getElementById('contact-description').textContent = contact.description;
@@ -162,6 +182,6 @@
         script.src = 'assets/js/main.js';
         document.body.appendChild(script);
         //panggil main js di sini
-})
-    .catch(error => console.error('Gagal load JSON:', error));
+    })
+        .catch(error => console.error('Gagal load JSON:', error));
 })(jQuery);
