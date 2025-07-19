@@ -1,9 +1,9 @@
-!(function($) {
+!(function ($) {
     "use strict";
 
     // Wait for the DOM to be fully loaded before trying to manipulate it.
     // This is crucial to ensure all HTML elements are available before script tries to access them.
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         // Fetch data.json with a cache-busting timestamp.
         // This ensures the browser always requests the latest version of the JSON file
         // and bypasses aggressive caching, which often causes data to "disappear" on refresh.
@@ -191,54 +191,21 @@
                 function loadPortfolio(portfolio) {
                     const portfolioTitle = document.getElementById('portfolio-title');
                     const portfolioDescription = document.getElementById('portfolio-description');
-                    const filtersContainer = document.getElementById('portfolio-flters');
                     const itemsContainer = document.getElementById('portfolio-container');
 
                     if (portfolioTitle) portfolioTitle.textContent = portfolio.title;
                     if (portfolioDescription) portfolioDescription.textContent = portfolio.description;
 
-                    if (filtersContainer) {
-                        filtersContainer.innerHTML = portfolio.filters.map((f, i) => `<li data-filter="${f.filter}" class="${i === 0 ? 'filter-active' : ''}">${f.name}</li>`).join('');
-                        // Initialize Isotope for filtering
-                        if (window.jQuery && window.jQuery.fn.isotope) {
-                            // Destroy existing instance if any
-                            if (itemsContainer._isotopeInstance) {
-                                itemsContainer._isotopeInstance.destroy();
-                            }
-                            // Create new instance
-                            itemsContainer._isotopeInstance = window.jQuery(itemsContainer).isotope({
-                                itemSelector: '.portfolio-item',
-                                layoutMode: 'fitRows'
-                            });
-
-                            window.jQuery(filtersContainer).on('click', 'li', function() {
-                                window.jQuery(filtersContainer).find('.filter-active').removeClass('filter-active');
-                                window.jQuery(this).addClass('filter-active');
-                                const filterValue = window.jQuery(this).attr('data-filter');
-                                itemsContainer._isotopeInstance.isotope({ filter: filterValue });
-                            });
-                        } else {
-                            console.warn('Isotope or jQuery not found. Please ensure assets/vendor/jquery/jquery.min.js and assets/vendor/isotope-layout/isotope.pkgd.min.js are loaded.');
-                        }
-                    }
-
                     if (itemsContainer) {
                         itemsContainer.innerHTML = portfolio.items.map(item => `
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-${item.category.toLowerCase().replace(/\s+/g, '')}">
-                                <div class="portfolio-wrap">
-                                    <img src="${item.image}" class="img-fluid" alt="${item.title}">
-                                    <div class="portfolio-links">
-                                        <a href="${item.detailsUrl}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="More Details">See Detail<i class="bx bx-link"></i></a>
-                                    </div>
-                                </div>
-                            </div>`).join('');
-                        // Initialize Venobox after portfolio items are loaded
-                        if (window.jQuery && window.jQuery.fn.venobox) {
-                            // Re-initialize all venobox elements
-                            window.jQuery('.venobox').venobox();
-                        } else {
-                            console.warn('Venobox or jQuery not found. Please ensure assets/vendor/jquery/jquery.min.js and assets/vendor/venobox/venobox.min.js are loaded.');
-                        }
+          <div class="col-lg-4 col-md-6 portfolio-item filter-${item.category.toLowerCase().replace(/\s+/g, '')}">
+            <div class="portfolio-wrap">
+              <img src="${item.image}" class="img-fluid" alt="${item.title}">
+              <div class="portfolio-links">
+                <a href="${item.detailsUrl}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="More Details">See Detail<i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>`).join('');
                     }
                 }
 
@@ -289,9 +256,9 @@
                                 autoplay: true, // Example option
                                 dots: true, // Example option
                                 responsive: { // Example responsive settings
-                                    0: { items: 1 },
-                                    768: { items: 2 },
-                                    992: { items: 3 }
+                                    0: {items: 1},
+                                    768: {items: 2},
+                                    992: {items: 3}
                                 }
                             });
                         } else {
