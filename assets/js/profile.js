@@ -187,27 +187,99 @@
                             </div>`;
                     }
                 }
+                // ... (kode lainnya)
 
                 function loadPortfolio(portfolio) {
                     const portfolioTitle = document.getElementById('portfolio-title');
                     const portfolioDescription = document.getElementById('portfolio-description');
-                    const itemsContainer = document.getElementById('portfolio-container');
+                    const filtersContainer = document.getElementById('portfolio-flters');
+                    const itemsContainer = document.getElementById('portfolio-container'); // Ini adalah elemen yang terpotong
 
                     if (portfolioTitle) portfolioTitle.textContent = portfolio.title;
                     if (portfolioDescription) portfolioDescription.textContent = portfolio.description;
 
+                    if (filtersContainer) {
+                        filtersContainer.innerHTML = portfolio.filters.map((f, i) => `<li data-filter="${f.filter}" class="${i === 0 ? 'filter-active' : ''}">${f.name}</li>`).join('');
+
+                        // Jangan inisialisasi Isotope di sini dulu, kita akan inisialisasi setelah item dimuat
+                        // dan mungkin setelah gambar dimuat.
+                    }
+
                     if (itemsContainer) {
                         itemsContainer.innerHTML = portfolio.items.map(item => `
-          <div class="col-lg-4 col-md-6 portfolio-item filter-${item.category.toLowerCase().replace(/\s+/g, '')}">
-            <div class="portfolio-wrap">
-              <img src="${item.image}" class="img-fluid" alt="${item.title}">
-              <div class="portfolio-links">
-                <a href="${item.detailsUrl}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="More Details">See Detail<i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>`).join('');
+            <div class="col-lg-4 col-md-6 portfolio-item filter-${item.category.toLowerCase().replace(/\s+/g, '')}">
+                <div class="portfolio-wrap">
+                    <img src="${item.image}" class="img-fluid" alt="${item.title}">
+                    <div class="portfolio-links">
+                        <a href="${item.detailsUrl}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="More Details">See Detail<i class="bx bx-link"></i></a>
+                    </div>
+                </div>
+            </div>`).join('');
+
+                        // --- Perbaikan Isotope dan Venobox di Sini ---
+
+                        // 1. Inisialisasi Venobox terlebih dahulu
+                        if (window.jQuery && window.jQuery.fn.venobox) {
+                            window.jQuery('.venobox').venobox();
+                        } else {
+                            console.warn('Venobox or jQuery not found. Ensure assets/vendor/jquery/jquery.min.js and assets/vendor/venobox/venobox.min.js are loaded.');
+                        }
+
+                        // 2. Inisialisasi Isotope, pastikan gambar sudah dimuat
+                        if (window.jQuery && window.jQuery.fn.isotope) {
+                            // Hancurkan instance Isotope yang ada jika ada
+                            if (itemsContainer._isotopeInstance) {
+                                itemsContainer._isotopeInstance.destroy();
+                            }
+
+                            // Gunakan imagesLoaded (jika tersedia dan dimuat) atau setTimeout
+                            // Cara terbaik adalah dengan imagesLoaded
+                            // Anda perlu memastikan imagesloaded.pkgd.min.js dimuat di HTML Anda
+                            // <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+                            if (window.imagesLoaded) {
+                                window.imagesLoaded(itemsContainer, function() {
+                                    // Semua gambar di dalam itemsContainer telah dimuat
+                                    itemsContainer._isotopeInstance = window.jQuery(itemsContainer).isotope({
+                                        itemSelector: '.portfolio-item',
+                                        layoutMode: 'fitRows' // Pastikan layoutMode sesuai kebutuhan Anda
+                                    });
+                                    // Refresh layout setelah perubahan
+                                    itemsContainer._isotopeInstance.isotope('layout');
+                                });
+                            } else {
+                                // Alternatif jika imagesLoaded tidak digunakan (kurang ideal tapi sering berhasil)
+                                setTimeout(() => {
+                                    itemsContainer._isotopeInstance = window.jQuery(itemsContainer).isotope({
+                                        itemSelector: '.portfolio-item',
+                                        layoutMode: 'fitRows'
+                                    });
+                                    itemsContainer._isotopeInstance.isotope('layout');
+                                }, 500); // Beri jeda 500ms agar gambar punya waktu loading
+                                console.warn('imagesLoaded.pkgd.min.js not found. Consider adding it for more reliable Isotope layout with dynamic images.');
+                            }
+
+                            // 3. Atur event listener untuk filter (ini bisa di luar `if (itemsContainer)`)
+                            // Tapi karena filter dan item terkait erat, letakkan di sini juga tidak masalah.
+                            if (filtersContainer) { // Pastikan filtersContainer ada
+                                // Hapus event listener sebelumnya untuk mencegah duplikasi
+                                window.jQuery(filtersContainer).off('click', 'li');
+                                window.jQuery(filtersContainer).on('click', 'li', function() {
+                                    window.jQuery(filtersContainer).find('.filter-active').removeClass('filter-active');
+                                    window.jQuery(this).addClass('filter-active');
+                                    const filterValue = window.jQuery(this).attr('data-filter');
+                                    // Periksa apakah instance Isotope sudah ada
+                                    if (itemsContainer._isotopeInstance) {
+                                        itemsContainer._isotopeInstance.isotope({ filter: filterValue });
+                                    }
+                                });
+                            }
+                        } else {
+                            console.warn('Isotope or jQuery not found. Ensure assets/vendor/jquery/jquery.min.js and assets/vendor/isotope-layout/isotope.pkgd.min.js are loaded.');
+                        }
                     }
                 }
+
+// ... (sisa kode Anda)
 
                 function loadServices(services) {
                     const servicesTitle = document.getElementById('services-title');
@@ -297,7 +369,7 @@
                 loadResume(data.resume);
                 loadPortfolio(data.portfolio);
                 loadServices(data.services);
-                // loadTestimonials(data.testimonials); // Uncomment if you enable testimonials section in HTML
+                loadTestimonials(data.testimonials); // Uncomment if you enable testimonials section in HTML
                 loadContact(data.contact);
 
                 // Initialize AOS (Animate On Scroll) after all dynamic content has been inserted into the DOM.
@@ -305,9 +377,8 @@
                 if (window.AOS) {
                     window.AOS.init({
                         duration: 1000,
-                        easing: "ease-in-out",
-                        once: true,
-                        mirror: false
+                        easing: "ease-in-out-back",
+                        once: true
                     });
                     // Crucial: Refresh AOS to re-scan the DOM for new elements after dynamic loading.
                     window.AOS.refresh();
