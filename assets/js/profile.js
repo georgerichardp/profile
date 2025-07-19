@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             window.location.pathname === ""
         ) {
             try {
-                const response = await fetch("assets/database/data.json");
+                const response = await fetch("./assets/database/data.json");
                 const data = await response.json();
                 loadedData = data;
                 initWithData(data);
