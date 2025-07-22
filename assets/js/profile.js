@@ -211,7 +211,7 @@
                 <div class="portfolio-wrap">
                     <img src="${item.image}" class="img-fluid" alt="${item.title}">
                     <div class="portfolio-links">
-                        <a href="${item.detailsUrl}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="More Details">See Detail<i class="bx bx-link"></i></a>
+                        // <a href="${item.detailsUrl}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="More Details">See Detail<i class="bx bx-link"></i></a>
                     </div>
                 </div>
             </div>`).join('');
