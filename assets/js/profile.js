@@ -93,37 +93,37 @@
                     }
                 }
 
-                function loadFacts(facts) {
-                    const factsTitle = document.getElementById('facts-title');
-                    const factsDescription = document.getElementById('facts-description');
-                    const container = document.getElementById('facts-container');
-
-                    if (factsTitle) factsTitle.textContent = facts.title;
-                    if (factsDescription) factsDescription.textContent = facts.description;
-
-                    if (container) {
-                        container.innerHTML = facts.items.map((item, index) => `
-                            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="${index * 100}">
-                                <div class="count-box">
-                                    <i class="${item.icon}"></i>
-                                    <span data-toggle="counter-up">${item.count}</span>
-                                    <p><strong>${item.label}</strong></p>
-                                </div>
-                            </div>`).join('');
-                        // Initialize/Re-initialize Counter-Up after content is loaded
-                        if (window.jQuery && window.jQuery.fn.counterUp) {
-                            // Delay execution slightly to ensure elements are fully rendered
-                            setTimeout(() => {
-                                window.jQuery('[data-toggle="counter-up"]').counterUp({
-                                    delay: 10,
-                                    time: 1000
-                                });
-                            }, 100); // A small delay might help with DOM readiness
-                        } else {
-                            console.warn('Counter-Up or jQuery not found. Please ensure assets/vendor/jquery/jquery.min.js and assets/vendor/counterup/counterup.min.js are loaded.');
-                        }
-                    }
-                }
+                // function loadFacts(facts) {
+                //     const factsTitle = document.getElementById('facts-title');
+                //     const factsDescription = document.getElementById('facts-description');
+                //     const container = document.getElementById('facts-container');
+                //
+                //     if (factsTitle) factsTitle.textContent = facts.title;
+                //     if (factsDescription) factsDescription.textContent = facts.description;
+                //
+                //     if (container) {
+                //         container.innerHTML = facts.items.map((item, index) => `
+                //             <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="${index * 100}">
+                //                 <div class="count-box">
+                //                     <i class="${item.icon}"></i>
+                //                     <span data-toggle="counter-up">${item.count}</span>
+                //                     <p><strong>${item.label}</strong></p>
+                //                 </div>
+                //             </div>`).join('');
+                //         // Initialize/Re-initialize Counter-Up after content is loaded
+                //         if (window.jQuery && window.jQuery.fn.counterUp) {
+                //             // Delay execution slightly to ensure elements are fully rendered
+                //             setTimeout(() => {
+                //                 window.jQuery('[data-toggle="counter-up"]').counterUp({
+                //                     delay: 10,
+                //                     time: 1000
+                //                 });
+                //             }, 100); // A small delay might help with DOM readiness
+                //         } else {
+                //             console.warn('Counter-Up or jQuery not found. Please ensure assets/vendor/jquery/jquery.min.js and assets/vendor/counterup/counterup.min.js are loaded.');
+                //         }
+                //     }
+                // }
 
                 function loadSkills(skills) {
                     const skillsTitle = document.getElementById('skills-title');
@@ -210,9 +210,6 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-${item.category.toLowerCase().replace(/\s+/g, '')}">
                 <div class="portfolio-wrap">
                     <img src="${item.image}" class="img-fluid" alt="${item.title}">
-                    <div class="portfolio-links">
-                        // <a href="${item.detailsUrl}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="More Details">See Detail<i class="bx bx-link"></i></a>
-                    </div>
                 </div>
             </div>`).join('');
 
@@ -364,7 +361,7 @@
                 loadHeader(data.profile, data.navigation); // Re-enabled and crucial for header content
                 loadHero(data.hero);
                 loadAbout(data.about, data.profile.image); // Pass profile image to About section
-                loadFacts(data.facts);
+                // loadFacts(data.facts);
                 loadSkills(data.skills);
                 loadResume(data.resume);
                 loadPortfolio(data.portfolio);
